@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakey Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navsection -->
+    <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2022/02/logo-1.png" alt="Bakey food"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="" role="button">
+                            Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#project">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="btncont">
+                                <a class="nav-link buybtn" href="#">Buy Now</a>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        const scrollUp = document.getElementById('scrollUp');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY > 10) {
+                document.getElementById('scrollUp').removeAttribute('hidden');
+            } else {
+                document.getElementById('scrollUp').setAttribute('hidden','true');
+            }
+        });
+    </script>
+    <div class="navsection">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="slidingDiv">
+                        <div class="slidingDivContent">
+                            <h1>We Best Quality Bakery</h1>
+                            <h2>Freshly baked comfort food & French café</h2>
+                            <div class="slidingDivbtncont">
+                                <a class="slidingDivbtn1" href="#">Get Started</a>
+                                <a class="slidingDivbtn2" href="#">Order Online</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slidingDiv">
+                        <div class="slidingDivContent">
+                            <h1>We Best Quality Bakery</h1>
+                            <h2>Freshly baked comfort food & French café</h2>
+                            <div class="slidingDivbtncont">
+                                <a class="slidingDivbtn1" href="#">Get Started</a>
+                                <a class="slidingDivbtn2" href="#">Order Online</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slidingDiv">
+                        <div class="slidingDivContent">
+                            <h1>We Best Quality Bakery</h1>
+                            <h2>Freshly baked comfort food & French café</h2>
+                            <div class="slidingDivbtncont">
+                                <a class="slidingDivbtn1" href="#">Get Started</a>
+                                <a class="slidingDivbtn2" href="#">Order Online</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden-focusable">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="servicecontainer" id="service">
+        <div class="servicesection">
+            <div class="container servicecont">
+                <div class="row">
+                    <div class="col">
+                        <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/service1.png" alt="">
+                        <h3>
+                            <a href="#">Berry White Cake</a>
+                        </h3>
+                        <div class="service-btn">
+                            <a href="#">Read More
+                                <span class="ti-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/service3-1.png" alt="">
+                        <h3>
+                            <a href="#">Caramel Mocha</a>
+                        </h3>
+                        <div class="service-btn">
+                            <a href="#">Read More
+                                <span class="ti-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/service2-1.png" alt="">
+                        <h3>
+                            <a href="#">Berry White Piza</a>
+                        </h3>
+                        <div class="service-btn">
+                            <a href="#">Read More
+                                <span class="ti-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/service4.png" alt="">
+                        <h3>
+                            <a href="#">Bakery Croissant</a>
+                        </h3>
+                        <div class="service-btn">
+                            <a href="#">Read More
+                                <span class="ti-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aboutsection" id="about">
+        <div class="row">
+            <div class="col">
+                <img src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2022/02/about-thumb.png" alt="">
+            </div>
+            <div class="col">
+                <h2>About Our Company</h2>
+                <h3>Creating the best-tasting bread, desserts, and coffee</h3>
+                <p>
+                    <b>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b>
+                </p>
+                <div>
+                    <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. </p>
+                </div>
+                <div>
+                    <a href="#about" class="witr_btn">Our About Us</a>
+                </div>
+            </div>
+            <div class="col-1 bg-img">
+                <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/shap1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container productsection">
+        <div class="producttitle">
+            <h2>Our  Menu Product</h2>
+            <h3> The best Product-tasting bread,</h3>
+            <h1>desserts, and coffee</h1>
+        </div>
+        <div class="productgridcontainer">
+            <div class="row">
+                <div class="col-3">
+                    <div class="productimg">
+                        <div class="tag">
+                            Sale!
+                        </div>
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/food-burger/" class="thumbnail_link">
+                            <img fetchpriority="high" decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro1.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro1-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro1-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro1-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro1-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">Food Burger</h2>
+                            <span class="amount1"><span class="currency">$</span>15</span>
+                            <span class="amount"><span class="currency">$</span>10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="productimg">
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/fresh-food/" class="thumbnail_link">
+                            <img decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro2.png" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro2.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro2-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro2-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro2-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro2-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">Fresh Food</h2>
+                            <span class="amount"><span class="currency">$</span>12</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="productimg">
+                        <div class="tag">
+                            Sale!
+                        </div>
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/just-beer/" class="thumbnail_link">
+                            <img decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro3.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro3.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro3-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro3-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro3-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro3-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">Just Beer</h2>
+                            <span class="amount1"><span class="currency">$</span>10</span>
+                            <span class="amount"><span class="currency">$</span>7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="productimg">
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/curry-puff/" class="thumbnail_link">
+                            <img loading="lazy" decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro4.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro4.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro4-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro4-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro4-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro4-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">Curry Puff</h2>
+                            <span class="amount"><span class="currency">$</span>8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="productimg">
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/bread-feed/" class="thumbnail_link">
+                            <img loading="lazy" decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro5.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro5.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro5-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro5-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro5-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro5-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">Bread Feed</h2>
+                            <span class="amount"><span class="currency">$</span>15</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="productimg">
+                        <div class="tag">
+                            Sale!
+                        </div>
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/best-cake-2/" class="thumbnail_link">
+                            <img loading="lazy" decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro6.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro6.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro6-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro6-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro6-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro6-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">Best Cake</h2>
+                            <span class="amount1"><span class="currency">$</span>18</span>
+                            <span class="amount"><span class="currency">$</span>15</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="productimg">
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/first-bread-2/" class="thumbnail_link">
+                            <img loading="lazy" decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro7.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro7.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro7-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro7-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro7-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro7-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">First Bread</h2>
+                            <span class="amount"><span class="currency">$</span>13</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="productimg">
+                        <div class="tag">
+                            Sale!
+                        </div>
+                        <a href="https://demo.themexbd.com/rtl/bakeyfood/product/padis-bread-2/" class="thumbnail_link">
+                            <img loading="lazy" decoding="async" width="250" height="250" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro8.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro8.png 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro8-100x100.png 100w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro8-150x150.png 150w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro8-106x106.png 106w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/02/pro8-70x70.png 70w" sizes="(max-width: 300px) 100vw, 300px">
+                        </a>
+                        <div class="hiddenbuttons">
+                            <a class="button1"><span class="button"><i class="bi bi-suit-heart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-cart-fill"></i></span></a>
+                            <a class="button1"><span class="button"><i class="bi bi-eye-fill"></i></span></a>
+                        </div>
+                        <div class="productdetail">
+                            <h2 class="productname">Padis Burger</h2>
+                            <span class="amount1"><span class="currency">$</span>25</span>
+                            <span class="amount"><span class="currency">$</span>24</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="storebutton">
+        <div class="row">
+            <div class="col">
+                <img src="assets/g2.jpg" alt="">
+                <div class="middle">
+                    <a href="#" class="text">Bakery Store</a>
+                </div>
+            </div>
+            <div class="col">
+                <img src="assets/g1.jpg" alt="">
+                <div class="middle">
+                  <a href="#" class="text">Bakery Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container membersection" id="team">
+        <div class="membertitle">
+            <h2>Our Company Member</h2>
+            <h3>Our Bakery Bread Member</h3>
+        </div>
+        <div class="row">
+            <div class="col memberdetescont">
+                <img loading="lazy" decoding="async" width="370" height="436" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/team1.jpg" alt="">
+                <div class="memberdetes">
+                    <div class="text">
+                        <h5>
+                            <a href="https://demo.themexbd.com/rtl/bakeyfood/em_team/kutubul-alam/" tabindex="0">Kutubul Alam </a>
+                        </h5>
+                        <span>CEO &amp; Funder </span>
+                        <div class="memberdetesbtn">
+                            <a class="detesbtn" href="#"><span><i class="bi bi-facebook detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-twitter detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-threads detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-pinterest detesbtn"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col memberdetescont">
+                <img loading="lazy" decoding="async" width="370" height="436" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/team2.jpg" alt="">
+                <div class="memberdetes">
+                    <div class="text">
+                        <h5>
+                            <a href="https://demo.themexbd.com/rtl/bakeyfood/em_team/arnika-alex/" tabindex="0">Arnika Alex </a>
+                        </h5>
+                        <span>Marketing</span>
+                        <div class="memberdetesbtn">
+                            <a class="detesbtn" href="#"><span><i class="bi bi-facebook detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-twitter detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-threads detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-pinterest detesbtn"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col memberdetescont">
+                <img loading="lazy" decoding="async" width="370" height="436" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/team3.jpg" alt="">
+                <div class="memberdetes">
+                    <div class="text">
+                        <h5>
+                            <a href="https://demo.themexbd.com/rtl/bakeyfood/em_team/kutubul-alam/" tabindex="0">Helan Griffin </a>
+                        </h5>
+                        <span>Manager </span>
+                        <div class="memberdetesbtn">
+                            <a class="detesbtn" href="#"><span><i class="bi bi-facebook detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-twitter detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-threads detesbtn"></i></span></a>
+                            <a class="detesbtn" href="#"><span><i class="bi bi-pinterest detesbtn"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row servicedetesrow">
+            <div class="col servicedetes">
+                <div class="servicedetescont">
+                    <img loading="lazy" decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/fe1.png" alt="">
+                    <h3>
+                        <a href="#">Fast and Free Shipping</a>
+                    </h3>
+                    <p>There are many variations of passa we ges of orem avai lable, </p>
+                </div>
+            </div>
+            <div class="col servicedetes">
+                <div class="servicedetescont">
+                    <img loading="lazy" decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/fe2.png" alt="">
+                    <h3>
+                        <a href="#">Choose the Cake</a>
+                    </h3>
+                    <p>There are many variations of passa we ges of orem avai lable, </p>
+                </div>
+            </div>
+            <div class="col servicedetes">
+                <div class="servicedetescont">
+                    <img loading="lazy" decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/fe3.png" alt="">
+                    <h3>
+                        <a href="#">Enjoy your Sweets</a>
+                    </h3>
+                    <p>There are many variations of passa we ges of orem avai lable, </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfoliosection" id="project">
+        <div class="portfoliotitle">
+            <h2>Our Company Portfolio</h2>
+            <h3>Checkout Our Best  Portfolio</h3>
+        </div>
+        <div class="portfoliogrid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <img loading="lazy" width="570" height="340" decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project1.jpg" alt="">
+                        <div class="prot_content_inner">
+                            <div class="picon">
+                                <a class="portfolio-icon venobox vbox-item" data-gall="myGallery" href="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project1.jpg"><i class="bi bi-image"></i></a>
+                            </div>
+                            <div class="porttitle_inner">
+                                <h3><a href="https://demo.themexbd.com/rtl/bakeyfood/em_portfolios/demo-media-title-1/">Demo Media Title 1</a></h3>
+                                <p>
+                                    <span class="category-item-p">Bread</span>
+                                    <span class="category-item-p">Dry Cake</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img loading="lazy" width="570" height="430" decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project3.jpg" alt="">
+                        <div class="prot_content_inner">
+                            <div class="picon">
+                                <a class="portfolio-icon venobox vbox-item" data-gall="myGallery" href="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project2.jpg"><i class="bi bi-image"></i></a>
+                            </div>
+                            <div class="porttitle_inner">
+                                <h3><a href="https://demo.themexbd.com/rtl/bakeyfood/em_portfolios/demo-media-title-2/">Demo Media Title 2</a></h3>
+                                <p>
+                                    <span class="category-item-p">Desserts</span>
+                                    <span class="category-item-p">Egg Cake</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <img loading="lazy" width="570" height="430" decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project2.jpg" alt="">
+                        <div class="prot_content_inner">
+                            <div class="picon">
+                                <a class="portfolio-icon venobox vbox-item" data-gall="myGallery" href="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project2.jpg"><i class="bi bi-image"></i></a>
+                            </div>
+                            <div class="porttitle_inner">
+                                <h3><a href="https://demo.themexbd.com/rtl/bakeyfood/em_portfolios/demo-media-title-3/">Demo Media Title 3</a></h3>
+                                <p>
+                                    <span class="category-item-p">Bread</span>
+                                    <span class="category-item-p">Desserts</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img loading="lazy" width="570" height="340" decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project4.jpg" alt="">
+                        <div class="prot_content_inner">
+                            <div class="picon">
+                                <a class="portfolio-icon venobox vbox-item" data-gall="myGallery" href="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/09/project2.jpg"><i class="bi bi-image"></i></a>
+                            </div>
+                            <div class="porttitle_inner">
+                                <h3><a href="https://demo.themexbd.com/rtl/bakeyfood/em_portfolios/demo-media-title-4/">Demo Media Title 4</a></h3>
+                                <p>
+                                    <span class="category-item-p">Coffee</span>
+                                    <span class="category-item-p">Egg Cake</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="awardssection">
+        <div class="awardstitle">
+            <h2>Our Company Brand</h2>
+            <h3>Meet Professional Awards</h3>
+            <div class="awardsslide">
+                <div class="row">
+                    <div class="col">
+                        <a href="#" tabindex="0">
+                            <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/br1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" tabindex="0">
+                            <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/br2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" tabindex="0">
+                            <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/br3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" tabindex="0">
+                            <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/br4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" tabindex="0">
+                            <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/br2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="aboutawards">Our About Awards</a>
+            </div>
+        </div>
+    </div>
+    <div class="testimonialsection">
+        <div class="testimonialtitle">
+            <h2>Our Testimonial</h2>
+            <h3>What A Clients Say ?</h3>
+            <div class="testimonialgrid">
+                <div class="row">
+                    <div class="col">
+                        <div class="testimonial">
+                            <h3><span><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span> Execllent!!</h3>
+                            <p>“Dessert pudding dessert jelly beans cupcake sweet caramels gingerbread. Fruitcake biscuit cheesecake. Cookie topping sweets muffine pudding tart bear claw sugar plum croissant.”.</p>
+                            <div class="commentdetes">
+                                <div class="image-col">
+                                    <img loading="lazy" decoding="async" width="64" height="64" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2020/09/test2-1.png" alt="">
+                                </div>
+                                <div class="text-col">
+                                    <h2>Chicana males<span>Marketing</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="testimonial">
+                            <h3><span><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span> Execllent!!</h3>
+                            <p>“Dessert pudding dessert jelly beans cupcake sweet caramels gingerbread. Fruitcake biscuit cheesecake. Cookie topping sweets muffine pudding tart bear claw sugar plum croissant.”.</p>
+                            <div class="commentdetes">
+                                <div class="image-col">
+                                    <img loading="lazy" decoding="async" width="64" height="64" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2020/09/test1-1.png" alt="">
+                                </div>
+                                <div class="text-col">
+                                    <h2>Nahar Parvin<span>Customer</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blogsection" id="blog">
+        <div class="blogtitle">
+            <h2>Our Latest Blog</h2>
+            <h3>Stay Motivated, Read the Blog</h3>
+        </div>
+        <div class="bloggrid">
+            <div class="row">
+                <div class="col">
+                    <div class="blog">
+                        <div class="blogimg">
+                            <a href="https://demo.themexbd.com/rtl/bakeyfood/productivity-tips-to-avoid-burn-out-when-working/" tabindex="0">
+                                <img loading="lazy" decoding="async" width="390" height="238" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="blogdetails">
+                            <span>
+                                <a href="https://demo.themexbd.com/rtl/bakeyfood/author/bakeyfood/" tabindex="0"><i class="bi bi-person-fill"></i> Bakeyfood </a>
+                            </span>
+                            <span>
+                                <a href="https://demo.themexbd.com/rtl/bakeyfood/category/egg-cake/" rel="category tag" tabindex="0"><i class="bi bi-tag-fill"></i> Egg Cake</a>
+                            </span>
+                            <h2><a href="https://demo.themexbd.com/rtl/bakeyfood/productivity-tips-to-avoid-burn-out-when-working/" tabindex="0">Productivity tips to avoid burn</a></h2>
+                            <p>That foresee the pain and trouble a in their duty through. indignation an are so beguiled and around the world.</p>
+                            <div class="blogbtn">
+                                <a class="learn_btn adnbtn2" href="https://demo.themexbd.com/rtl/bakeyfood/productivity-tips-to-avoid-burn-out-when-working/" tabindex="0">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="blog">
+                        <div class="blogimg">
+                            <a href="https://demo.themexbd.com/rtl/bakeyfood/7-secrets-about-nonprofit-that-has-never-been-revealed/" tabindex="0">
+                                <img loading="lazy" decoding="async" width="390" height="238" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="blogdetails">
+                            <span>
+                                <a href="https://demo.themexbd.com/rtl/bakeyfood/author/bakeyfood/" tabindex="0"><i class="bi bi-person-fill"></i> Bakeyfood </a>
+                            </span>
+                            <span>
+                                <a href="https://demo.themexbd.com/rtl/bakeyfood/category/egg-cake/" rel="category tag" tabindex="0"><i class="bi bi-tag-fill"></i> Coffee</a>
+                            </span>
+                            <h2><a href="https://demo.themexbd.com/rtl/bakeyfood/productivity-tips-to-avoid-burn-out-when-working/" tabindex="0">7 Secrets About Nonprofit That</a></h2>
+                            <p>That foresee the pain and trouble a in their duty through. indignation an are so beguiled and around the world.</p>
+                            <div class="blogbtn">
+                                <a class="learn_btn adnbtn2" href="https://demo.themexbd.com/rtl/bakeyfood/7-secrets-about-nonprofit-that-has-never-been-revealed/" tabindex="0">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="blog">
+                        <div class="blogimg">
+                            <a href="https://demo.themexbd.com/rtl/bakeyfood/netflixs-orange-is-the-new-black-brings/" tabindex="0">
+                                <img loading="lazy" decoding="async" width="390" height="238" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="blogdetails">
+                            <span>
+                                <a href="https://demo.themexbd.com/rtl/bakeyfood/author/bakeyfood/" tabindex="0"><i class="bi bi-person-fill"></i> Bakeyfood </a>
+                            </span>
+                            <span>
+                                <a href="https://demo.themexbd.com/rtl/bakeyfood/category/egg-cake/" rel="category tag" tabindex="0"><i class="bi bi-tag-fill"></i> Desserts</a>
+                            </span>
+                            <h2><a href="https://demo.themexbd.com/rtl/bakeyfood/productivity-tips-to-avoid-burn-out-when-working/" tabindex="0">Netflix’s “Orange Is the New</a></h2>
+                            <p>That foresee the pain and trouble a in their duty through. indignation an are so beguiled and around the world.</p>
+                            <div class="blogbtn">
+                                <a class="learn_btn adnbtn2" href="https://demo.themexbd.com/rtl/bakeyfood/netflixs-orange-is-the-new-black-brings/" tabindex="0">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contactsection" id="contact">
+        <div class="contactfield">
+            <div class="row">
+                <div class="col">
+                    <img decoding="async" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/11/contact-img.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="contactform">
+                        <form action="" method="">
+                            <input type="text" id="fname" name="firstname" placeholder="Your Name*">
+                            <input type="text" id="lname" name="lastname" placeholder="Your Website*">
+                            <input type="number"id="number" name="number" placeholder="Your Phone*">
+                            <textarea id="subject" name="subject" placeholder="Your Comment*"></textarea>
+                            <button type="submit" class="contactbtn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footersection">
+        <div class="footergrid">
+            <div class="row">
+                <div class="col">
+                    <div class="footertitle">
+                        <h2>Address Us</h2>
+                    </div>
+                    <div class="footeritem">
+                        <div class="footer_s_inner">
+                            <div class="footer-sociala-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="footer-sociala-info">
+                                <p>Adress: 21 Division St, Rangpur, RS 101215, RMS</p>
+                            </div>
+                        </div>
+                        <div class="footer_s_inner">
+                            <div class="footer-sociala-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="footer-sociala-info">
+                                <p>Phone: +06544451100</p>
+                            </div>
+                        </div>
+                        <div class="footer_s_inner">
+                            <div class="footer-sociala-icon">
+                                <i class="bi bi-envelope-paper-fill"></i>
+                            </div>
+                            <div class="footer-sociala-info">
+                                <p> Email: info@example.com</p>
+                            </div>
+                        </div>
+                        <div class="footer_s_inner">
+                            <div class="footer-sociala-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div class="footer-sociala-info">
+                                <p>Opening Hours: 9am-5pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footertitle">
+                        <h2>Quick Links</h2>
+                    </div>
+                    <div class="footeritem">
+                        <ul>
+                            <li>
+                                <a href="#">– Customers Services</a>
+                            </li>
+                            <li>
+                                <a href="#">– Department Doctor</a>
+                            </li>
+                            <li>
+                                <a href="#">– About Our Company</a>
+                            </li>
+                            <li>
+                                <a href="#">– Medical Service</a>
+                            </li>
+                            <li>
+                                <a href="#">– Make An Appointment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footertitle">
+                        <h2>Recent Post</h2>
+                    </div>
+                    <div class="footeritem">
+                        <div class="recent-post-item">
+                            <div class="recent-post-image">
+                                    <a href="https://demo.themexbd.com/rtl/bakeyfood/productivity-tips-to-avoid-burn-out-when-working/">
+                                        <img width="70" height="43" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2.jpg" class="attachment-bakeyfood_recent_image size-bakeyfood_recent_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2.jpg 900w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2-600x367.jpg 600w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2-300x183.jpg 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2-768x469.jpg 768w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog2-570x350.jpg 570w" sizes="(max-width: 70px) 100vw, 70px">					
+                                    </a>
+                            </div>
+                            <div class="recent-post-text">
+                                <h4>
+                                    <a href="https://demo.themexbd.com/rtl/bakeyfood/productivity-tips-to-avoid-burn-out-when-working/">
+                                        Productivity tips to avoid burn out when working.
+                                    </a>
+                                </h4>
+                                <span class="rcomment">February 27, 2022</span>
+                            </div>
+                        </div>
+                        <div class="recent-post-item">
+                            <div class="recent-post-image">
+                                <a href="https://demo.themexbd.com/rtl/bakeyfood/7-secrets-about-nonprofit-that-has-never-been-revealed/">
+                                    <img width="70" height="43" src="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog4.jpg" class="attachment-bakeyfood_recent_image size-bakeyfood_recent_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog4.jpg 900w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog4-600x367.jpg 600w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog4-300x183.jpg 300w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog4-768x469.jpg 768w, https://demo.themexbd.com/rtl/bakeyfood/wp-content/uploads/2021/08/blog4-570x350.jpg 570w" sizes="(max-width: 70px) 100vw, 70px">					
+                                </a>
+                            </div>
+                            <div class="recent-post-text">
+                                <h4>
+                                    <a href="https://demo.themexbd.com/rtl/bakeyfood/7-secrets-about-nonprofit-that-has-never-been-revealed/">
+                                        7 Secrets About Nonprofit That Has Never Been Revealed.
+                                    </a>
+                                </h4>
+                                <span class="rcomment">February 27, 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footertitle">
+                        <h2>Working Hours</h2>
+                    </div>
+                    <div class="footeritem">
+                        <div class="sched"> <span>Tuesday - Friday</span> <span>08:00 - 20:00</span></div>
+                        <div class="sched"> <span>Saturday</span> <span>09:00 - 18:00</span></div>
+                        <div class="sched"> <span>Sunday</span> <span>09:00 - 18:00</span></div>
+                        <div class="sched"> <span>Monday</span> <span>09:00 - 18:00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="borderdiv"></div>
+				<div class="container">
+					<div class="row">
+                        <div class="col">
+                            <div class="copy-right-text">
+                                <p>Copyright © bakeyfood all rights reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="footer-menu">
+                                <ul id="menu-footer-menu" class="text-right">
+                                    <li id="menu-item-5556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5556">
+                                        <a href="https://demo.themexbd.com/rtl/bakeyfood/service/">Service</a>
+                                    </li>
+                                    <li id="menu-item-7151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7151">
+                                        <a href="https://demo.themexbd.com/rtl/bakeyfood/pricing-table/">Pricing Table</a>
+                                    </li>
+                                    <li id="menu-item-5555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5555">
+                                        <a href="https://demo.themexbd.com/rtl/bakeyfood/contact/">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;" hidden><i class="bi bi-arrow-up-short"></i></a>
+</body>
+</html>
